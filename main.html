@@ -4,93 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пореческий сельсовет - Карта памятников</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #004d99;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .goky{
-            font-size: 36px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            margin: 50px 0;
-        }
-
-        .map-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .map-container svg {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .map-point {
-            fill: #ffffff;
-            opacity: .01;
-            cursor: pointer;
-            transition: fill 0.3s;
-        }
-
-        .map-point:hover {
-            fill: blue;
-            opacity: .4;
-        }
-
-        .village-info {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 26px;
-            text-indent: 25px;
-
-        }
-
-        footer {
-            background-color: #004d99;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        img{
-            padding: 20px;
-        }
-
-        a{
-            color: black;
-        }
-        .gggg{
-            color: white;
-            text-decoration: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -104,7 +18,7 @@
             <svg viewBox="0 0 1032 817" xmlns="http://www.w3.org/2000/svg">
                 <!-- Здесь будет загруженный SVG-код -->
                 <!-- Ниже вставлен ваш файл SVG -->
-                <image href="Map_Complet.svg" width="1032" height="817" />
+                <image href="img/Map_Complet.svg" width="1032" height="817" />
                 <!-- Добавьте интерактивные элементы (например, деревни) -->
                 <rect  class="map-point" x="420" y="30" width="250" height="100" rx="15" data-target="village1"></rect>
                 <rect  class="map-point" x="380" y="180" width="280" height="100" rx="15" data-target="village2"></rect>
@@ -113,7 +27,7 @@
         </section>
 
         <section id="village1" class="village-info">
-           <img src="zapyrie.jpg" width=35% align="left"> 
+           <img src="img/zapyrie.jpg" width=35% align="left"> 
            <h2>Запурье</h2>
             <p><b>Трагедия и память Запурья в годы Великой Отечественной войны</b>
                 <br><p>Запурье, небольшая деревня в Гродненском районе Белоруссии, является местом, где во время Великой Отечественной войны произошла страшная трагедия. 18 сентября 1943 года немецкие оккупационные войска в отместку за гибель лесничего Фолькера расстреляли 48 мирных жителей деревни. Эта расправа была произведена из-за предположений, что убийцы лесничего носили фамилии Бура и Церебей, которые были распространены в местности.</p>
@@ -131,7 +45,7 @@
         </section>
 
         <section id="village2" class="village-info">
-            <img src="porehe.jpg" width=35% align="left">
+            <img src="img/porehe.jpg" width=35% align="left">
             <h2>Поречье</h2>
             <p><b>Память о героях Поречья в годы Второй мировой войны</b></p>
                 <p>Во время Второй мировой войны на территории Поречья происходили ожесточенные бои между советскими и немецкими войсками. В память о солдатах, сражавшихся за освобождение Поречья от фашистов, на привокзальной площади перед зданием вокзала был установлен памятник, который является не только символом памяти, но и реальным местом захоронения.</p>
@@ -147,7 +61,7 @@
         </section>
 
         <section id="village3" class="village-info">
-            <img src="babino.jpg" width=35% align="left">
+            <img src="img/babino.jpg" width=35% align="left">
             <h2>Бабино</h2>
             <p><b>Братская могила в деревне Бабино: память о трагедии 1943 года</b></p>
                 <p>В Гродненской области, в Гродненском районе, на восточной окраине деревни Бабино, расположено военное захоронение №55544. Это братская могила, которая стала местом последнего покоя для 14 человек — 12 известных и 2 неизвестных. Захоронение занимает площадь 2 на 4 метра и представляет собой важное историческое свидетельство событий, произошедших в годы Великой Отечественной войны.</p>
