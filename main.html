@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="scrollToTopBtn"><img src="img/icons8-map-96.png" alt="map-point"></button>
     <header>
         <h1 class="goky">Государственное учреждение образования "Гродненское областное кадетское училище"</h1>
         <h1>Пореческий сельсовет - Карта памятников</h1>
@@ -27,7 +28,7 @@
         </section>
 
         <section id="village1" class="village-info">
-           <img src="img/zapyrie.jpg" width=35% align="left"> 
+           <img src="img/zapyrie.jpg" width=35%> 
            <h2>Запурье</h2>
             <p><b>Трагедия и память Запурья в годы Великой Отечественной войны</b>
                 <br><p>Запурье, небольшая деревня в Гродненском районе Белоруссии, является местом, где во время Великой Отечественной войны произошла страшная трагедия. 18 сентября 1943 года немецкие оккупационные войска в отместку за гибель лесничего Фолькера расстреляли 48 мирных жителей деревни. Эта расправа была произведена из-за предположений, что убийцы лесничего носили фамилии Бура и Церебей, которые были распространены в местности.</p>
@@ -103,6 +104,33 @@
                 document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
             });
         });
+    </script>
+    <script>
+                    document.addEventListener("scroll", handleScroll);
+            // get a reference to our predefined button
+            var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+
+            function handleScroll() {
+            var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var GOLDEN_RATIO = 0.5;
+
+            if ((document.documentElement.scrollTop / scrollableHeight ) > 0.1) {
+                //show button
+                scrollToTopBtn.style.display = "block";
+            } else {
+                //hide button
+                scrollToTopBtn.style.display = "none";
+            }
+            }
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
     </script>
 </body>
 </html>

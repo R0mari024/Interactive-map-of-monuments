@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 header {
@@ -23,9 +23,9 @@ h1 {
 }
 
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+
+    margin: 5px auto;
+    padding: 0 5px;
 }
 
 section {
@@ -61,7 +61,8 @@ section {
     border-radius: 10px;
     font-size: 26px;
     text-indent: 25px;
-
+    margin: 10px;
+    padding: 10px;
 }
 
 footer {
@@ -71,14 +72,169 @@ footer {
     text-align: center;
 }
 
-img{
-    padding: 20px;
-}
-
 a{
     color: black;
 }
 .gggg{
     color: white;
     text-decoration: none;
+}
+
+.scrollToTopBtn{
+    scale: 50%;
+    margin-left: 35px;
+    display: block;
+    background-color: #004d9965;
+    opacity: 0.7;
+    border: none;
+    outline: none;
+}
+
+.scrollToTopBtn:hover{
+    opacity: 1;
+    transition: fill 0.3s;
+}
+
+  
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    display: none;
+    padding: 8px 4px;
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .map-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .village-info {
+        font-size: 18px;
+    }
+
+    /* Уменьшаем размер карты для мобильных устройств */
+    .map-container svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Для экранов шириной 480px и меньше (мобильные телефоны) */
+@media (max-width: 480px){
+    .goky {
+        font-size: 24px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .village-info {
+        font-size: 16px;
+    }
+    
+    /* Кнопка возврата наверх (scrollToTop) для мобильных устройств */
+    .scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        scale: 40%;
+    }
+} 
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Ограничение для больших экранов */
+}
+
+
+
+        /* Стили для слайдера фотографий */
+.photo-slider {
+    margin: 50px auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Кнопки для прокрутки */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .photo-slider {
+        max-width: 90%;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev-btn, .next-btn {
+        font-size: 18px;
+        padding: 6px;
+    }
 }
