@@ -166,7 +166,7 @@ img {
         /* Стили для слайдера фотографий */
 .photo-slider {
     margin: 50px auto;
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -237,4 +237,45 @@ img {
         font-size: 18px;
         padding: 6px;
     }
+}
+
+.divi {
+    box-sizing: border-box;
+}
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
